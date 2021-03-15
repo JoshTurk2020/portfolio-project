@@ -1,12 +1,13 @@
 {{ blog.title }}
+{% load static %}
 <div style="text-align:center"> 
   <button onclick="playPause()">Play/Pause</button> 
   <button onclick="makeBig()">Big</button>
   <button onclick="makeSmall()">Small</button>
   <button onclick="makeNormal()">Normal</button>
   <br><br>
-{% load static %}
-<video src="{% static 'Go_Away.mp4'}" type='video/mp4' id='Go_Away' controls width='600' height='600'>
+
+<video src="{% static 'Wedding_Dance.mp4' %}" type='video/mp4' id='Go_Away' controls width='600' height='600'>
   Your browser does not support HTML video.
 </video>
 </div>
