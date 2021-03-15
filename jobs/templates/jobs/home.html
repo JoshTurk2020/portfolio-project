@@ -27,7 +27,7 @@
 
     <style>
     body {
-        background-image: url('/static/slavicexpansion.jpg');
+        background-image: none;
         background-repeat: no-repeat; 
         font-size: 1.125rem;
         text-anchor: middle;
@@ -50,15 +50,16 @@
 <header>
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">James Joshua Pennington, PhD</a>
+    <a class="navbar-brand" href="{% url 'home' %}">James Joshua Pennington, PhD</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
-        <a class="nav-link" aria-current="page" href="#">Home</a>
+        <a class="nav-link" aria-current="page" href="https://twitter.com/JoshPennBG">Twitter</a>
+        <a class="nav-link" aria-current="page" href="https://osu.academia.edu/JamesJPennington">Academia.edu Page</a>
         <a class="nav-link" href="{% static 'JoshCV2021.pdf' %}">CV</a>
-        <a class="nav-link" href="#">Publications</a>
+        <a class="nav-link" href="{% url 'allblogs' %}">Blogs</a>
         <a class="nav-link" href="{% static 'Go_Away.mp4' %}">Songs</a>
       </div>
     </div>
