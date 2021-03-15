@@ -26,7 +26,7 @@ SECRET_KEY = 'eq@_o9r6fe1=-s*=n3i7$ky&^#%v_d)!3$xmy!l5r)b1m1+h#k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.0.90', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -57,7 +57,9 @@ ROOT_URLCONF = 'portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+                os.path.join(BASE_DIR, 'portfotemplates'),
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,6 +70,11 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+
+TEMPLATE_LOADERS = [
+    'django.template.loaders.app_directories_Loader',
 ]
 
 WSGI_APPLICATION = 'portfolio.wsgi.application'

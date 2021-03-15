@@ -29,9 +29,9 @@
         background-repeat: no-repeat; 
         font-size: 1.125rem;
         text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+        -webkit-user-select: auto;
+        -moz-user-select: auto;
+        user-select: auto;
       }
 
       @media (min-width: 768px) {
@@ -73,7 +73,11 @@
 
  	{% for blog in blogs.all %}
  	<a href=""><h3>{{ blog.title}}</h3></a>
- 	{{ blog.pub_date }}
+ 	{{ blog.pub_date_pretty }}
+ 	<br />
+ 	<img class="img-fluid" src="{{ blog.image.url }}" height=300 width=300 />
+ 	<br />
+ 	<p>{{ blog.summary }}</p>
  	{% endfor %}
 
 
