@@ -1,10 +1,37 @@
 {{ blog.title }}
-
-<video width="400" controls>
-  <source src="Go_Away.mp4" type="video/mp4">
-  <source src="Go_Away.ogg" type="video/ogg">
+<div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+{% load static %}
+<video src="{% static 'Go_Away.mp4'}" type='video/mp4' id='Go_Away' controls width='600' height='600'>
   Your browser does not support HTML video.
 </video>
+</div>
+<script> 
+var myVideo = document.getElementById("Go_Away"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 700; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 500; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 600; 
+} 
+</script> 
 
 <p>
 Video courtesy of James Joshua Pennington
