@@ -13,8 +13,8 @@ class Blog(models.Model):
 		return self.title
 
 	def summary(self):
-		if len(self.body) > 250:
-			return self.body[:250].rsplit(' ',1)[0] + " [...]"
+		if len(self.body) > 1000:
+			return self.body[5000].rsplit(' ',1)[0] + " [...]"
 		else:
 			return self.body
 
